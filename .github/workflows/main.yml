@@ -25,6 +25,8 @@ jobs:
     # устанавливаем зависимости проекта
     - name: Install dependencies
       run: |
+        pip install --upgrade pip setuptools wheel
+        pip install flake8 flake8-isort
         python -m pip install --upgrade pip setuptools
         pip install flake8==6.0.0 flake8-isort==6.0.0
     # Запускаем flake8
